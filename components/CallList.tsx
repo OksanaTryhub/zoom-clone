@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CallList = () => {
+const CallList = ({type}: {type: 'ended' | 'upcoming' | 'recording'}) => {
   return (
     <div>
       CallList
