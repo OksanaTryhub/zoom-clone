@@ -73,6 +73,11 @@ const MeetingTypeList = () => {
 
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetails?.id}`;
 
+  const convertToRelativePath = (fullUrl: string): string => {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    return fullUrl.substring(baseUrl!.length);
+  }
+
   return (
     <section className='grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4'>
       <HomeCard
@@ -170,7 +175,7 @@ const MeetingTypeList = () => {
         title='Type the link here'
         className='text-center'
         buttonText='Join Meeting'
-        handleClick={() => router.push(values.link)}
+        handleClick={() => router.push(convertToRelativePath(values.link))}
       >
         <Input 
           placeholder='Meeting Link'
