@@ -8,7 +8,7 @@ import { useGetCallById } from "@/hooks/useGetCallById";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 
-const Table = ({title, description}: {title: 'string'; description: 'string'}) => (
+const Table = ({title, description}: {title: string; description: string}) => (
   <div className='flex flex-col items-start gap-2 xl:flex-row'>
     <h1 className='text-base font-medium text-sky-1 lg:text-xl xl:min-w-32'>{title}:</h1>
     <h2 className='truncate text-sm font-bold max-sm:max-w-[320px] lg:text-xl'>{description}</h2>
@@ -20,7 +20,7 @@ const PersonalRoom = () => {
   const meetingId = user?.id;
   const { toast } = useToast();  
   const client = useStreamVideoClient();
-  const {call} = useGetCallById(meetingId);
+  const {call} = useGetCallById(meetingId!);
   const router = useRouter();
   
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingId}?personal=true}`;
@@ -48,7 +48,7 @@ const PersonalRoom = () => {
       </h1>
       <div className='flex w-full flex-col gap-8 xl:max-w-[900px]'>
         <Table title="Topic" description={`${user?.username}'s meeting room`}/>
-        <Table title="Meeting ID" description={meetingId}/>
+        <Table title="Meeting ID" description={meetingId!}/>
         <Table title="Link" description={meetingLink}/>
       </div>
       <div className='flex gap-5'>
