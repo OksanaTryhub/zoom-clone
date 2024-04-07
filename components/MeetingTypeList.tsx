@@ -73,11 +73,28 @@ const MeetingTypeList = () => {
 
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetails?.id}`;
 
+  // const convertToRelativePath = (fullUrl: string): string => {
+  //   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  //   return fullUrl.substring(baseUrl!.length);
+  // }
+
   const convertToRelativePath = (fullUrl: string): string => {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-    return fullUrl.substring(baseUrl!.length);
+  let baseUrl: string = process.env.NEXT_PUBLIC_BASE_URL as string;
+
+  // Удаляем протокол (http:// или https://) из baseUrl, если он присутствует
+  baseUrl = baseUrl.replace(/^https?:\/\//, '');
+
+  if (fullUrl.includes(baseUrl)) {
+    // Находим индекс, с которого начинается baseUrl в fullUrl
+    const startIndex = fullUrl.indexOf(baseUrl) + baseUrl.length;
+
+    // Получаем относительный путь, начиная с этого индекса
+    return fullUrl.substring(startIndex);
   }
 
+  return fullUrl;
+  }
+  
   return (
     <section className='grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4'>
       <HomeCard
