@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# YOOM - ZOOM клон
 
-## Getting Started
+Цей пет-проект представляє функціональний Full Stack додаток для проведення відеоконференцій із захищеним входом, створенням відеодзвінків і доступом до різних додаткових функцій, таких як запис, показ екрана та керування учасниками. Проект створено за допомогою Next.js 14, TypeScript, GetStream, Tailwind CSS, shadcn/ui, Clerk та має адаптивний дизайн з підходом Mobile First.
 
-First, run the development server:
+## Мета проекту
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Метою цього проекту є створення зручного та надійного додатку для відеоконференцій, який забезпечує приватніть для користувачів.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Технології
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Проект реалізовано з використанням фреймворку Next.js, який дозволяє генерувати HTML-контент на сервері та відправляти його клієнтам уже готовим, що значно скорочує час завантаження сторінки та підвищує її продуктивність. Дизайн створений з врахуванням принципів Mobile First, забезпечуючи оптимальний вигляд на різних пристроях.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Основні технології, використані в проекті:
 
-## Learn More
+- Next.js 14: Для серверного рендерингу та ефективної взаємодії з користувачем.
+- TypeScript: Для типізації та покращення надійності коду.
+- GetStream: Для реалізації функцій відео та аудіо зв'язку.
+- Tailwind CSS: Для швидкої та гнучкої стилізації.
+- shadcn/ui: Для створення компонентів інтерфейсу.
+- Clerk: Для управління аутентифікацією та авторизацією користувачів.
 
-To learn more about Next.js, take a look at the following resources:
+## [YOOM - ZOOM клон](https://zoom-clone-ashen.vercel.app/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+===========================================================
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# YOOM - ZOOM Clone
 
-## Deploy on Vercel
+This pet project represents a functional Full Stack application for conducting video conferences with secure login, creating video calls, and accessing various additional features such as recording, screen sharing, and participant management. The project is built using Next.js 14, TypeScript, GetStream, Tailwind CSS, shadcn/ui, Clerk, and features a responsive design with a Mobile First approach.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Goal
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The goal of this project is to create a convenient and reliable video conferencing application that ensures user privacy.
+
+## Technologies
+
+The project is implemented using the Next.js framework, which allows server-side generation of HTML content and sending it to clients already rendered, significantly reducing page load time and improving performance. The design is created with Mobile First principles, ensuring optimal appearance on various devices.
+
+### Key Tech Stack Used in the Project:
+
+- [Next.js](https://nextjs.org/): For server-side rendering and efficient user interaction.
+- [TypeScript](https://www.typescriptlang.org/): For type checking and improving code reliability.
+- [GetStream](https://getstream.io/): For implementing video and audio communication features.
+- [TailwindCSS](https://tailwindcss.com/): For quick and flexible styling.
+- [shadcn/ui](https://ui.shadcn.com/): For creating UI components.
+- [Clerk](https://clerk.com/): For managing user authentication and authorization.
+
+## [YOOM - ZOOM clone](https://zoom-clone-ashen.vercel.app/)
